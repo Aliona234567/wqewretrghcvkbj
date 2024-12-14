@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #F9E4C7;
+  color: black;
+  font-family: "Jura", sans-serif;
+  font-weight: 300;
+
+}
+.wraper{
+  width: 1280px;
+  margin: 20px auto;
+}
+header ul.nav{
+  float: right;
+  list-style: none;
+}
+header ul.nav li{
+  display: inline;
+  margin-left: 60px;
+  cursor: pointer;
+  transition: opacity 500ms ease;
+}
+header ul.nav li:hover{
+  opacity: 0.5;
+}
+
+header .logo{
+  font-weight: 600;
+  font-size: 30px;
+}
+header .presentesion{
+  margin: 20px 0;
+  background: url('./img/992f42f2faeb98f92147525997768c06.jpg') no-repeat;
+  width: 100%;
+  height: 700px;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+header .presentesion::after{
+
+
+  content: "Эксклюзивные конфеты из бельгийского и французского шоколада.Ручная работа. Тонкий подход к рецептуре, форме и упаковке.Доставка по всей России.";
+  position: absolute;
+  top: 55%;
+  left: 250px;
+  width: 900px;
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  text-align:center
+}
+header .shop-cart-button{
+  float: right;
+  cursor: pointer;
+  transition: color,transform, 500ms ease;
+
+}
+header .shop-cart-button:hover,
+header .shop-cart-button.active{
+  transform: scale(1.5)
+  ;
+  color: aqua;
+}
+header .shop-cart{
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 450px;
+  background-color: aliceblue;
+  -webkit-box-shadow: 9px 10px 24px 3px rgba(39, 48, 56, 0.2);
+  -moz-box-shadow: 9px 10px 24px 3px rgba(39, 48, 56, 0.2);
+  box-shadow: 9px 10px 24px 3px rgba(39, 48, 56, 0.2);
+  z-index: 1000;
+
+  padding: 20px;
+  padding-bottom: 0;
+}
+header .shop-cart .item .delete-icon{
+  color: black;
+  float: right;
+  position: relative;
+  top: -30px;
+  transition: color,transform, 500ms ease;
+
+}
+header .shop-cart .item .delete-icon:hover{
+  color: red;
+  transform: scale(1.5);
+}
+header .shop-cart .emty h2{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+header .shop-cart .item{
+  width: 100%;
+  float: left;
+  margin-bottom: 20px;
+}
+header .shop-cart .summa {
+  float: left;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+header .shop-cart .item img{
+  width: 70px;
+  float: left;
+  margin-right: 20px;
+}
+header .shop-cart .item h2{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+header .shop-cart .item p{
+  color: #797979;
+  font-weight: 600;
+
+}
+header {
+  position: relative;
+}
+main{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between  ;
+}
+
+main .item{
+  width: 26%;
+  margin-bottom: 50px;
+  background-color: aliceblue;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 20px;
+}
+main .item img,
+.full-item img{
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  transition: transform 500ms ease;
+  cursor: pointer;
+
+}
+main .item img:hover,
+.full-item img:hover{
+  transform: scale(1.05);
+}
+main h2,.full-item h2,
+ main p,.full-item p,
+  main b, .full-item b{
+  margin: 20px 20px;
+  color: #333;
+
+}
+main b ,.full-item b {
+  color: black;
+  font-weight: 700;
+
+}
+main .add-to-cart,
+.full-item .add-to-cart
+{
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  background: #D9D9D9;
+  width: 150px;
+  height: 31px;
+  text-align: center;
+  line-height: 30px;
+  color: black;
+  border-radius: 5%;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 500ms ease;
+
+}
+
+main .add-to-cart:hover,
+.full-item .add-to-cart:hover{
+  transform: scale(1.01) translateY(-5px);
+}
+.full-item{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: aliceblue;
+  z-index: 9999;
+  overflow: auto;
+}
+.full-item > div{
+  width: 600px;
+  padding: relative;
+  margin: 10% auto;
+  padding: 40px 30px;
+  background: #fff;
+  border: 9px;
+}
+
+.categoris div {
+  display: inline-block;
+  background: #f2f2f2;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-bottom: 25px;
+  margin-right: 15px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 500ms ease;
+}
+
+.categoris div:hover { 
+  border-color: silver;
+  transform: scale(1.1);
+}
